@@ -1,7 +1,12 @@
 body {
   display: flex;
-  flex-flow: row wrap;
-  gap: 10px;
+  height: 100vh;
+  flex-flow: row wrap; /* flex-flow: flex-direction + flex-wrap */
+  /* gap: 10px; */
+  row-gap: 20px;
+  column-gap: 10px;
+  align-items: center; /* cross-axis align */
+  align-content: space-around; /* 여러 줄이 있을때 cross-axis에서 justify-content하는 것처럼 동작 */
 }
 
 .box {
