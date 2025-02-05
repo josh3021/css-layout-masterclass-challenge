@@ -1,33 +1,33 @@
 body {
   padding: 0;
   margin: 0;
-}
-
-.father {
   display: grid;
-  grid-template-columns: [apple] 100px [banana] 200px [charlie] 100px [delta];
-  grid-template-rows: [korea] 200px [usa] 100px [japan];
-  gap: 10px;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr 1fr;
+  grid-template-areas: "header header header header" "content content content menu" "content content content menu" "footer footer footer footer"; */
+  grid-template:
+    "header header header header" 1fr
+    "content content content menu" 10fr
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
 }
 
-.child {
-  background-color: tomato;
-  display: flex;
-  color: white;
-  font-size: 3rem;
-  justify-content: center;
-  align-items: center;
+header {
+  background-color: aqua;
+  grid-area: header;
 }
 
-.child:last-child {
-  background-color: turquoise;
-  /* grid-column-start: 2;
-  grid-column-end: -1; /* -1은 마지막을 의미함 */
-  grid-column: 2 / -1;
+section {
+  background-color: coral;
+  grid-area: content;
 }
 
-.child:first-child {
-  /* grid-row-start: 1;
-  grid-row-end: 3; */
-  grid-row: 1 / 3;
+aside {
+  background-color: forestgreen;
+  grid-area: menu;
+}
+
+footer {
+  background-color: midnightblue;
+  grid-area: footer;
 }
