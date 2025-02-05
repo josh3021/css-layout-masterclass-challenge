@@ -1,10 +1,17 @@
 body {
   display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
 }
 
 .box {
   width: 200px;
   height: 200px;
   background-color: tomato;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
 }
