@@ -10,6 +10,7 @@ body {
 }
 
 .box {
+  order: 1;
   width: 200px;
   height: 200px;
   background-color: tomato;
@@ -19,4 +20,18 @@ body {
   font-size: 2rem;
   color: #fff;
   font-weight: 700;
+}
+
+.box:nth-child(3) {
+  order: -1;
+  background-color: orange;
+}
+
+.box:nth-child(9) {
+  order: 9;
+  background-color: black;
+}
+
+.box:nth-child(2) {
+  align-self: flex-end;
 }
