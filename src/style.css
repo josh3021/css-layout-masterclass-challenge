@@ -3,31 +3,20 @@ body {
   margin: 0;
   display: grid;
   height: 100vh;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 10fr 1fr 1fr;
-  grid-template-areas: "header header header header" "content content content menu" "content content content menu" "footer footer footer footer"; */
-  grid-template:
-    "header header header header" 1fr
-    "content content content menu" 10fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  min-height: 70vh;
+  max-height: 100vh;
+  gap: 1rem;
+  grid-auto-rows: 1fr; /* template columns, template rows 넘어가는 row의 크기 비율을 설정한다. */
+  grid-auto-columns: 0.5fr;
+  grid-auto-flow: column; /* grid가 정렬되는 flow 선언 */
 }
 
-header {
-  background-color: aqua;
-  grid-area: header;
-}
-
-section {
-  background-color: coral;
-  grid-area: content;
-}
-
-aside {
-  background-color: forestgreen;
-  grid-area: menu;
-}
-
-footer {
-  background-color: midnightblue;
-  grid-area: footer;
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
 }
