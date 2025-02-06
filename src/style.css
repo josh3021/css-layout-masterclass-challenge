@@ -12,11 +12,22 @@ body {
   grid-auto-rows: 1fr; /* template columns, template rows 넘어가는 row의 크기 비율을 설정한다. */
   grid-auto-columns: 0.5fr;
   grid-auto-flow: column; /* grid가 정렬되는 flow 선언 */
+  /* justify-items: stretch; /* child items들을 그리드 셀 안에서 stretch한다. main-axis와 상관없이 (horizontal) */
+  /* align-items: center; /* child items들을 그리드 셀 안에서 center한다. main-axis와 상관없이 (vertical) */
+  place-items: center stretch; /* align-items, justify-items를 동시에 설정하능 */
 }
 
 div {
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: pink;
+}
+
+div:nth-child(4) {
+  background-color: teal;
+  /* justify-self: end; /* justify-items를 혼자 */
+  /* align-self: start; /* align-items를 혼자 */
+  place-self: start end; /* align-self, justify-self */
 }
